@@ -1,3 +1,7 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
 std::string compress(std::string s) {
   int count=0;
   string result;
