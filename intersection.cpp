@@ -9,19 +9,10 @@ std::vector<int> intersection(std::vector<int> a, std::vector<int> b) {
   std::vector<int> result;
   if(a == b)
     return a;
-  if (a.size() < b.size()) {
-    for (const auto& element : b) {
-      auto it = find(a.begin(), a.end(), element);
-      if(it  != a.end())
-        result.push_back(element);
-    }
-  }
-  else {
-    for (const auto& element : a) {
-      auto it = find(b.begin(), b.end(), element);
-      if(it  != b.end())
-        result.push_back(element);
-    }
+  for (const auto& element : b) {
+    auto it = find(a.begin(), a.end(), element);
+    if(it  != a.end())
+      result.push_back(element);
   }
   return result;
 }
