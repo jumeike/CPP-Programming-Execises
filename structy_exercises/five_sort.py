@@ -12,4 +12,5 @@ def five_sort(nums):
     temp = nums[j]
     nums[j] = nums[i]
     nums[i] = temp
+    # Alternatively, nums[i],nums[j] = nums[j],nums[i]
   return nums
